@@ -1,7 +1,7 @@
 'use client';
 
 import { useState, useEffect, useCallback, useMemo } from 'react';
-import { supabase, Promocao } from '@/lib/supabase';
+import { getSupabase, Promocao } from '@/lib/supabase';
 import { Header } from './components/Header';
 import { SearchBar } from './components/SearchBar';
 import { RadiusFilter } from './components/RadiusFilter';
@@ -22,7 +22,7 @@ export default function Home() {
     setState('loading-data');
 
     try {
-      const { data, error } = await supabase.rpc('melhores_precos_perto', {
+      const { data, error } = await getSupabase().rpc('melhores_precos_perto', {
         lat,
         lng,
         raio_km: radius,
