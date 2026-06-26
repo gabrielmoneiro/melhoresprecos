@@ -1,0 +1,31 @@
+.searchContainer {
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.875rem 1rem;
+  font-size: 1rem;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-button);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  transition: border-color var(--transition);
+}
+
+.searchInput:focus {
+  outline: none;
+  border-color: var(--color-primary);
+}
+
+.searchInput::placeholder {
+  color: var(--color-text-secondary);
+}
+
+@media (min-width: 768px) {
+  .searchContainer {
+    padding: 1rem 2rem;
+  }
+}

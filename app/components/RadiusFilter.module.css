@@ -1,0 +1,63 @@
+.filterContainer {
+  padding: 0 1rem 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  margin-bottom: 0.5rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.buttonGroup {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.button {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-button);
+  background-color: var(--color-white);
+  color: var(--color-text);
+  transition: all var(--transition);
+}
+
+.button:hover:not(.active) {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.button.active {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-white);
+}
+
+.button.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+@media (min-width: 768px) {
+  .filterContainer {
+    padding: 0 2rem 1rem;
+  }
+
+  .buttonGroup {
+    flex: 0 0 auto;
+    gap: 0.75rem;
+  }
+
+  .button {
+    flex: 0 0 auto;
+    min-width: 80px;
+  }
+}
